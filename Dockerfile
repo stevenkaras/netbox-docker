@@ -1,4 +1,4 @@
-FROM python:2.7-alpine
+FROM python:2.7-alpine3.6
 
 RUN apk add --no-cache \
       bash \
@@ -11,7 +11,7 @@ RUN apk add --no-cache \
       libxml2-dev \
       libxslt-dev \
       openldap-dev \
-      openssl-dev \
+      libressl-dev \
       postgresql-dev \
       wget \
   && pip install gunicorn==17.5 django-auth-ldap
